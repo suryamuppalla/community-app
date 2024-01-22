@@ -1,0 +1,25 @@
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  max-height: 100px;
+  max-width: 100px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.phone {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  ion-icon {
+    margin-right: 3px;
+  }
+}
+
+.ion-text-primary {
+  color: var(--ion-color-primary);
+  font-size: 15px;
+}

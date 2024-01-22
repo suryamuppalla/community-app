@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!--<ion-menu-button></ion-menu-button>-->
+      <ion-avatar class="avatar" (click)="menuController.toggle()">
+        <img alt="Silhouette of a person's head" src="assets/images/logo.jpg" />
+      </ion-avatar>
+    </ion-buttons>
+    <ion-title class="logo">
+      Bemmac Housing Society
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Committee</ion-card-title>
+        <!--<ion-card-subtitle>Photos along with their roles</ion-card-subtitle>-->
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- Create login form with phone number and OTP along with login button -->
+        <ion-list>
+          <ng-container *ngFor="let obj of items | slice: 0 : 100; let i = index">
+            <ion-item>
+              <ion-avatar class="avatar">
+                <img alt="Silhouette of a person's head" [src]="obj.thumbnail" />
+              </ion-avatar>
+              <ion-label style="margin-left: 15px;">
+                <h2 class="ion-text-primary" style="font-weight: bold">{{ obj.name }}</h2>
+                <strong style="font-size: 14px;">{{ obj.role }}</strong>
+                <a class="phone" style="text-decoration: none; font-size: 13px;" href="tel:+91{{obj.phone}}">
+                  <ion-icon name="call"></ion-icon>
+                  {{ obj.phone }}
+                </a>
+              </ion-label>
+            </ion-item>
+          </ng-container>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

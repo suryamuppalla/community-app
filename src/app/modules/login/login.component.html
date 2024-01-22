@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!--<ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Login</ion-title>
+    </ion-toolbar>
+  </ion-header>
+-->
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Login Now</ion-card-title>
+        <ion-card-subtitle>Use your phone number as username</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <!-- Create login form with phone number and OTP along with login button -->
+        <ion-list>
+          <ion-item>
+            <ion-label position="stacked">Phone Number</ion-label>
+            <ion-input type="tel"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">OTP</ion-label>
+            <ion-input type="tel"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-button routerLink="/dashboard" expand="block" color="primary" fill="outline">Login</ion-button>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
